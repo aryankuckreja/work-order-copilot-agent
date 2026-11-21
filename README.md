@@ -55,7 +55,6 @@ Details: [docs/architecture.md](docs/architecture.md).
 ## Results
 
 - Cut consumption from **22 to 17 credits per setup (about 23%)** by removing a redundant tool call.
-- Investigated a **341% capacity overage** (3,414 consumed against 999 allocated) and traced it to an unrelated flow in the same environment, not the agent.
 - Nightly verification produced **43 flags on a 7-day run and 62 on a 10-day run** for review.
 - Validated live against the ERP by the business, with a pilot group planned after handover.
 
@@ -71,3 +70,7 @@ python3 run_demo.py          # generates synthetic data, runs the checks, prints
 ## Tech
 
 Microsoft Copilot Studio (generative orchestration, tools, knowledge sources), Microsoft 365 Copilot, Power Automate, Azure SQL, T-SQL (CTEs, window functions), prompt and instruction design, model evaluation. Demo: Python, SQLite.
+
+## How this was built
+
+I use Claude as a working part of my development process. On this project I owned the architecture, all platform configuration, every test run, production debugging and every accept or reject decision. Claude drafted SQL, agent instructions and documentation under my direction, and I reviewed and tested each change before it went live. This write-up and the demo were also drafted with Claude.
